@@ -1,0 +1,8 @@
+venv/
+target/
+logs/
+*.csv
+*.json
+*.txt
+.env
+*.key

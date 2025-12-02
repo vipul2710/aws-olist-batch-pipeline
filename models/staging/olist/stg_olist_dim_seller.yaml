@@ -1,0 +1,13 @@
+version: 2
+
+models:
+  - name: stg_olist_dim_seller
+    columns:
+      - name: seller_sk
+        tests:
+          - unique
+          - not_null
+
+      - name: seller_id
+        tests:
+          - not_null

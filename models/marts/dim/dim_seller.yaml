@@ -1,0 +1,23 @@
+version: 2
+
+models:
+  - name: dim_seller
+    description: "Final seller dimension table"
+    columns:
+      - name: seller_sk
+        tests:
+          - not_null
+          - unique
+
+      - name: seller_id
+        tests:
+          - not_null
+          - unique
+
+      - name: seller_city
+        tests:
+          - not_null
+
+      - name: seller_state
+        tests:
+          - not_null

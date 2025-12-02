@@ -1,0 +1,20 @@
+version: 2
+
+sources:
+  - name: olist_curated
+    schema: olist_analytics_dev
+    freshness:
+      warn_after: {count: 30, period: day}
+      error_after: {count: 60, period: day}
+    tables:
+      - name: dim_customer
+        loaded_at_field: created_at
+
+      - name: dim_product
+        loaded_at_field: created_at
+
+      - name: dim_seller
+        loaded_at_field: created_at
+
+      - name: fact_order_items
+        loaded_at_field: shipping_limit_date

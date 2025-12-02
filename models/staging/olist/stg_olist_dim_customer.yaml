@@ -1,0 +1,14 @@
+version: 2
+
+models:
+  - name: stg_olist_dim_customer
+    description : "Cleansed and standardized customer dimension from the curated layer."
+    columns:
+      - name: customer_sk
+        tests:
+          - unique
+          - not_null
+
+      - name: customer_id
+        tests:
+          - not_null
